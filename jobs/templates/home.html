@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+{%block title%}
+<title> Jobs</title>
+{%endblock title%}
+{%block content%}
+{%for Job in job_list %}
+<div class="card" style="width: 40rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{Job.company}}</h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary">{{Job.role}}</h6>
+      <p class="card-text">{{Job.qualification}}</p>
+      <p href="#" class="card-link">{{Job.description}}</p>
+      <p class="card-text">{{Job.experience}}</p>
+      <p class="card-text">{{Job.skills_required}}</p>
+      <p class="card-text">{{Job.salary}}</p>
+      <h5 class="card-text">{{Job.hr}}</h5>
+    </div>
+</div>
+{%endfor%}
+{%endblock content%}
